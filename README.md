@@ -22,7 +22,7 @@
 
   - 📜 [Учебный текст по PEG](https://www.rubtsov.su/public/fl/2022/PEG_text.pdf)
   - 🔗 [Peggy.js](https://peggyjs.org)
-    - 💻 [PEG-грамматики с лекции](Lecture_5_examples.peg)
+    - 💻 [PEG-грамматики с лекции](./PEG/Lecture_5_examples.peg)
       
 
 
