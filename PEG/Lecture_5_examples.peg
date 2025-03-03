@@ -1,0 +1,31 @@
+S = !(ANBN) ANY
+ALPH = "a" / "b" / "c"
+ANY = ALPH ANY /  ALPH
+ANBN = "a" ANBN "b" / "ab"
+ANCN = "a" ANCN "c" / "ac" 
+
+
+S = &(ANBNCK) AKBNCN
+ALPH = "a" / "b" / "c"
+ANY = ALPH ANY /  ALPH
+ANBN = "a" ANBN "b" / "ab"
+ANCN = "a" ANCN "c" / "ac" 
+BNCN = "b" BNCN "c" / "bc" 
+AK = "a" AK / "a"
+CK = "c" CK / "c"
+ANBNCK = ANBN CK
+AKBNCN =AK BNCN
+
+
+S = &(ANBN) ANBKCN
+ALPH = "a" / "b" / "c"
+ANY = ALPH ANY /  ALPH
+ANBN = "a" ANBN "b" / "ab"
+ANCN = "a" ANCN "c" / "ac" 
+BNCN = "b" BNCN "c" / "bc" 
+AK = "a" AK / "a"
+BK = "b" BK / "b" 
+CK = "c" CK / "c"
+ANBNCK = ANBN CK
+AKBNCN =AK BNCN
+ANBKCN = "a" ANBKCN "c" / BK
