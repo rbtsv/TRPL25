@@ -1,0 +1,9 @@
+grammar Arithm
+  expr <- sum / prod / term 
+  term <- [0-9]+ <NumNode> / "(" x:expr ")" <PassNode> 
+  sum  <- x:prod op:pm y:expr <PNode>
+  prod <- x:term  "*" y:prod <MNode> / term
+  pm <- "+" / "-"
+  
+
+ 

@@ -1,0 +1,15 @@
+grammar TrueArithm
+  expr <- x:term y:sum <PlusNode>
+  sum <- (op:[+,-] x:term)* <SumNode>
+  term <- fact prod <MultNode>
+  prod <- fact / (op:[*,/] x:prod)* <ProdNode>
+  fact <- [0-9]+ <NumNode> / "(" x:expr ")" <PassNode>
+ 
+ # 1 + 2 - 3 - 4 
+ # E  -> T E_
+ # E_ -> "+" T E_ | "-" T E_ | ""
+ # T  -> F T_
+ # T_ -> "*" F T_ | "/" F T_ | ""
+ # F  -> id | "(" E ")"
+ # Num -> "0" Num | "1" Num | "0" | "1"
+

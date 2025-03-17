@@ -1,0 +1,6 @@
+grammar Arithm
+  expr <- sum / prod  / term
+  term <- [0-9]+ %make_number / "(" expr ")" %pass_1
+  sum  <- prod "+" expr %sum
+  prod <- term  "*" prod %prod / term 
+ 

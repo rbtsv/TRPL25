@@ -1,0 +1,9 @@
+grammar Arithm
+  expr <- '('  first:expr  '+'  second:expr  ')' <PMNode> / prod  / num
+  prod <- '('  first:expr  '*'  second:expr  ')' <MDNode>
+  num <- [0-9]+ <NumNode>
+ 
+  # E -> "(" E '+' E ")" / P / N
+  # P -> "(" E '*' E ")"
+  # N -> id
+ 

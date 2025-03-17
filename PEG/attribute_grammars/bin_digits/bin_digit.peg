@@ -1,0 +1,6 @@
+grammar Digits
+	S <- "1" d:D <DNodeOne> / "0" <ENode>
+	D <- "1" d:D <DNodeOne> / "0" d:D <DNodeZero> / "" <ENode> 
+
+# S <- "1" D / "0"	
+# D <- "1" D / "0" D / ""
