@@ -23,7 +23,11 @@
   - 📜 [Учебный текст по PEG](https://www.rubtsov.su/public/fl/2022/PEG_text.pdf)
   - 🔗 [Peggy.js](https://peggyjs.org)
     - 💻 [PEG-грамматики с лекции](./PEG/Lecture_5_examples.peg)
-      
+- **LISP**
+  - 📖 Книга [SICP](#SICP)
+  - 💻 [Код с лекции](./LISP)
+  - 🌀 [Racket](https://racket-lang.org/)
+
 
 
 ## 📖 Литература 
@@ -52,7 +56,7 @@
   
 - *[Gerald Jay Sussman](https://mitpress.mit.edu/author/gerald-jay-sussman-2582) and [Harold Abelson](https://mitpress.mit.edu/author/harold-abelson-12602)*
 
-  Structure and Interpretation of Computer Programs 
+  Structure and Interpretation of Computer Programs<a id="SICP">&nbsp;</a>
 
 ​	[Сайт книги со свободно-распростаняемой версией](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
 
