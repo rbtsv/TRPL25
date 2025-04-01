@@ -27,6 +27,9 @@
   - 📖 Книга [SICP](#SICP)
   - 💻 [Код с лекции](./LISP)
   - 🌀 [Racket](https://racket-lang.org/)
+- **Семинарские занятия по Haskell**
+  - ⌨️ [Код с занятий](./Haskell/Classes)
+  - 👨🏼‍🏫 [Конспекты к занятиям](./Haskell/)
 
 
 
@@ -56,13 +59,19 @@
   
 - *[Gerald Jay Sussman](https://mitpress.mit.edu/author/gerald-jay-sussman-2582) and [Harold Abelson](https://mitpress.mit.edu/author/harold-abelson-12602)*
 
-  Structure and Interpretation of Computer Programs<a id="SICP">&nbsp;</a>
+  Structure and Interpretation of Computer Programs
 
-​	[Сайт книги со свободно-распростаняемой версией](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
+  [Сайт книги со свободно-распростаняемой версией](https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html)
 
 - *Will Kurt*
 
   [Get Programming with Haskell](https://edu.anarcho-copy.org/Programming%20Languages/Haskell/Get%20Programming%20with%20Haskell.pdf)
 
   Manning Publications, 2018
+
+- *Miran Lipovača*
+
+  [Learn You a Haskell for Great Good!](https://learnyouahaskell.com/)
+
+  No Starch Press, April 2011
 
