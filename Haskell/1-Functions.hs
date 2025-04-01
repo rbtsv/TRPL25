@@ -60,14 +60,14 @@ maj_3 _ _ _ = False
 -- в виде неизменяемости переменных.
 -- Но ведь любой цикл требует переменной, по которой мы итерируемся...
 -- Как же нам обойтись без циклов? Рекурсия!
--- Напишем самую примитивную реализцию факториала.
+-- Напишем самую примитивную реализцию Фибоначи.
 
-factorial :: Integer -> Integer
-factorial 0 = 1
-factorial 1 = 1
-factorial n = factorial (n - 1) + factorial (n - 2)
+fib :: Integer -> Integer
+fib 0 = 1
+fib 1 = 1
+fib n = fib (n - 1) + fib (n - 2)
 
--- Вычислите в GHCI factorial 5.
+-- Вычислите в GHCI fib 5.
 -- В чём проблема? Каждый вызов функции вызывает её еще два раза!
 -- Таким образом, мы заново считаем одно значение несколько раз.
 -- Как этого избежать? Надо "хранить" пару значений и обновлять её.
@@ -79,17 +79,17 @@ step :: (Integer, Integer) -> Integer  -> (Integer, Integer)
 step pair 0 = pair
 step (a, b) n = step (b, a+b) (n-1)
 
-factorial' :: Integer -> Integer
+fib' :: Integer -> Integer
 -- Обратите внимание на то, что уравнения для функций не всегда требуют аргументов.
 -- Как понять, что нужна функция snd? Hoogle!
 -- $ просто меняет приоритет операций
-factorial' x = snd $ step (0, 1) x
+fib' x = snd $ step (0, 1) x
 
--- Заметим, что step не нужна нам за пределами factorial',
+-- Заметим, что step не нужна нам за пределами fib',
 -- для этого есть синтаксис where
 
-factorial'' :: Integer -> Integer
-factorial'' x = snd $ step' (0, 1) x
+fib'' :: Integer -> Integer
+fib'' x = snd $ step' (0, 1) x
     where 
         step' pair 0 = pair
         step' (a, b) n = step' (b, a+b) (n-1)
