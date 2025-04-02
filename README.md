@@ -30,6 +30,8 @@
 - **Семинарские занятия по Haskell**
   - ⌨️ [Код с занятий](./Haskell/Classes)
   - 👨🏼‍🏫 [Конспекты к занятиям](./Haskell/)
+  - 📘 [Вики-конспект про монады](https://en.wikibooks.org/wiki/Haskell/Prologue:_IO,_an_applicative_functor)
+  - 📘 [Typeclassopedia](https://wiki.haskell.org/index.php?title=Typeclassopedia)
 
 
 
@@ -75,3 +77,10 @@
 
   No Starch Press, April 2011
 
+- *Conor McBride and Ross Paterson*
+
+  [Applicative Programming with Effects](https://www.staff.city.ac.uk/~ross/papers/Applicative.html)
+ 
+  Journal of Functional Programming 18:1 (2008), pages 1-13.
+
+  Оригинальная статья про аппликативные функторы.
