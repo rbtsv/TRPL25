@@ -1,4 +1,4 @@
-import Control.Monad 
+import Control.Monad (liftM2)
 -- Сейчас мы поговорим о стандартных для haskell классах типов
 -- Самое простое, что есть - функтор.
 -- Мы все знаем что такое map :: (a -> b) -> [a] -> [b]
@@ -116,3 +116,62 @@ listOfTuples = do
     return (x, y) -- return = pure
 
 -- Maybe, List, кто еще? State и IO! Но об этом (возможно) позже
+
+newtype State s a = State { runState :: s -> (a,s) }
+
+instance Functor (State s) where
+    fmap :: (a -> b) -> State s a -> State s b
+    fmap fn (State sa) = State (\s0 -> let (a, s1) = sa s0 in (fn a, s1))
+instance Applicative (State s) where
+    pure :: a -> State s a
+    pure a = State $ \s -> (a, s)
+    (<*>) :: State s (a -> b) -> State s a -> State s b
+    (State sf) <*> (State sa) = State (\s0 -> let (fn,s1) = sf s0
+                                                  (a, s2) = sa s1
+                                        in (fn a, s2))
+instance Monad (State s) where
+    (>>=) :: State s a -> (a -> State s b) -> State s b
+    State act >>= k = State $ \s ->
+      let (a, s') = act s
+      in runState (k a) s'
+
+type Stack = [Int]
+
+empty :: Stack
+empty = []
+
+pop :: State Stack Int
+pop = State $ \(x:xs) -> (x,xs)
+
+push :: Int -> State Stack ()
+push a = State $ \xs -> ((),a:xs)
+
+tos :: State Stack Int
+tos = State $ \(x:xs) -> (x,x:xs)
+
+
+stackManip = do
+    push 10
+    push 20
+    a <- pop
+    b <- pop
+    push (a+b)
+    tos
+
+stackManip' :: State Stack Int
+stackManip' = liftM2 (+) a b >>= push >> tos
+    where a = push 10 >> push 20 >> pop
+          b = a >> pop
+
+-- Вввод и вывод это в некотором роде тоже работа со state
+-- Просто state -- это весь мир вокруг компьютера :)
+-- Для этого есть монада IO
+
+humanManip :: IO Int
+humanManip = do
+    a <- getLine
+    b <- getLine
+    let x = read a
+    let y = read b
+    print (x + y)
+    return (x + y)
