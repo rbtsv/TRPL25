@@ -84,3 +84,9 @@
   Journal of Functional Programming 18:1 (2008), pages 1-13.
 
   Оригинальная статья про аппликативные функторы.
+
+- *Graham Hutton and Erik Meijer*
+
+  [Monadic Parser Combinators](https://people.cs.nott.ac.uk/pszgmh/monparsing.pdf)
+
+  Technical report NOTTCS-TR-96-4

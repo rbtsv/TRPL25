@@ -198,3 +198,7 @@ mulParser'' :: Parser Expression
 mulParser'' = [Mult x y | 
     x <- char '(' *> exprParser <* char '*',
     y <- exprParser <* char ')']
+
+-- Напишем функцию, которая принимает от пользователя строку
+-- И возвращает Nothing, если она пустая, а иначе её
+
