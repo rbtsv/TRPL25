@@ -1,0 +1,10 @@
+name = "sorting"
+version = "0.1.0"
+defaultTargets = ["sorting"]
+
+[[lean_lib]]
+name = "Sorting"
+
+[[lean_exe]]
+name = "sorting"
+root = "Main"
