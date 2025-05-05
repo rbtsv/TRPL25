@@ -1,0 +1,31 @@
+{
+    "id": 42,
+    "count": 7,
+    "scores": [85, 92, 78, 88, 95],
+    "settings": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "volume": 75
+    },
+    "users": [
+      {
+        "id": 101,
+        "age": 28,
+        "posts": 15
+      },
+      {
+        "id": 102,
+        "age": 35,
+        "posts": 42
+      }
+    ],
+    "inventory": {
+      "items": ["sword", "shield", "potion"],
+      "quantities": [1, 1, 5],
+      "gold": 1000
+    },
+    "active": true,
+    "level": 3,
+    "timestamp": 1688131200
+}
